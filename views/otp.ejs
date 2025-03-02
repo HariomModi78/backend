@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styleSheets/login.css">
+</head>
+<body>
+    <main>
+        <h1>Login</h1>
+        <form action="/otp/<%=name%>/<%=email%>/<%=mobileNumber%>/<%=password%>/<%=college%>" method="post">
+            <input type="tel" name="otp" id="" placeholder="OTP" required>
+            <input type="submit" value="Submit OTP">
+        </form>
+        <div class="formate">
+            <p>I forgote my password</p>
+            <a href="">formate</a>
+        </div>
+        <div class="signup">
+            <p>I am new user</p>
+            <a href="\signup">SignUp</a>
+        </div>
+    </main>
+    <script src="/javaScripts/nav.js"></script>
+
+</body>
+</html>

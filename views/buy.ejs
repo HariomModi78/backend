@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styleSheets/buy.css">
+</head>
+<body>
+    <main>
+        <div class="footer">
+            <div class="price">₹<%=product.realPrice%></div>
+            <a href="/orderConfirmed/<%=user._id%>/<%=product._id%>" class="procced">Procced</a>
+        </div>
+        <div class="header">
+            <a class="back icon" href="/productView/<%=product._id%>">
+                <img src="/images/back.png" alt="">
+            </a>
+            <p>Order</p>
+        </div>
+        <div class="deliver">
+            <p>Deliver to: </p>
+            <div class="address"><%=user.college%></div>
+        </div>
+        <div class="product"> <!--product start-->
+            <div class="productImage">
+                <img src="<%=product.imageUrl%>" alt="">
+                <select name="" id="">
+                    <option value="">Qty1</option>
+                    <option value="">Qty2</option>
+                    <option value="">Qty3</option>
+                    <option value="">Qty4</option>
+                </select>
+            </div>
+            <div class="orderDetail">
+                <div class="name "><%=product.name%></div>
+                <div class="priceDetail">
+                    <div class="off detail"></div>
+                    <div class="fakePrice detail">₹<%=product.fakePrice%></div>
+                    <div class="realPrice detail">₹<%=product.realPrice%></div>
+                </div>
+                
+
+            </div>
+        </div> <!--product end-->
+        <div class="overAllBill">
+            <div class="billItem bill">
+                <p>Price(1 item)</p>
+                <p class="totalItem">₹<%=product.fakePrice%></p>
+            </div>
+            <div class="delivery bill">
+                <p>Delivery:</p>
+                <p><del>40</del>Free Delivery</p>
+            </div>
+            <div class="totalAmount bill">
+                <p>Total Amount:</p>
+                <p>₹<%=product.realPrice%></p>
+            </div>
+        </div>
+        <div class="save">You'll save ₹<%=Number(product.fakePrice)-Number(product.realPrice)%> on this order!</div>
+    </main>
+    <script src="/javaScripts/buy.js"></script>
+</body>
+</html>

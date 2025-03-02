@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styleSheets/productView.css">
+</head>
+<body>
+    <main>
+        <div class="footer">
+            <a class="addToCart" href="/addToCart/<%=product._id%>">Add to cart</a>
+            <a class="buyNow" href="/buy/<%=productid%>">Buy now</a>
+        </div>
+        <div class="search">
+            <div class="back">
+                <img src="/images/back.png" alt="">
+            </div>
+            <input type="search" name="" id="" placeholder="Search">
+            <div class="searchIcon"></div>
+            <div class="cart">
+                <img src="/images/shopping-cart.png" alt="">
+            </div>
+        </div>
+        <div class="image">
+            <img src="<%=product.imageUrl%>" alt="">
+        </div>
+        <div class="name"><%=product.name%></div>
+        <div class="rating">
+            <p>Qty:</p>
+            <select name="quantity" id="">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div class="price">
+            <div class="fakePrice">₹<%=product.fakePrice%></div>
+            <div class="realPrice">₹<%=product.realPrice%>
+                <% if(user.mobileNumber=="7898488935"){%>
+                    <a class="addButton" href="/updateItem/<%=productid%>" >update item</a>
+              <%  }else{%>
+                <a class="addButton" href="/wishList/<%=user._id%>/<%=productid%>" >Add To Wish List </a>
+              
+              <%}%>
+            </div>
+        </div>
+        <div class="delivery">
+            <p>Delivery To:</p>
+            <p><%=user.college%></p>
+        </div>
+        <div class="paymentMode">
+            <div class="cash mode">
+                <del>Cash on Delivery </del>
+            </div>
+            <div class="online mode">online payment</div>
+        </div>
+
+
+        <div class="fake"></div>
+    </main>
+
+    <script src="/javaScripts/productView.js"></script>
+
+</body>
+</html>

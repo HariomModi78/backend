@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styleSheets/cart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Pattaya&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="footer">
+            <div class="footerItem home">
+                <img src="/images/home (1).png" alt="">
+                <p>Home</p>
+            </div>
+            <div class="footerItem profile">
+                <img src="/images/user (1).png" alt="">
+                <p>Profile</p>
+            </div>
+            <div class="footerItem cart">
+                <img src="/images/shopping-cart.png" alt="">
+                <p>Cart</p>
+            </div>
+            <div class="footerItem menu">
+                <img src="/images/menu.png" alt="">
+                <p>Menu</p>
+            </div>
+            <div class="footerItem support">
+                <img src="/images/customer-service.png" alt="">
+                <p>Support</p>
+            </div>
+        </div>
+        <div class="text">
+            My Cart
+        </div>
+        <div class="deliveryPoint">
+            <p>Delivery to: </p>
+            <p class="padding"><%=user.college%></p>
+        </div>
+        <div class="productCover">
+           <%for(let i=0;i < cartProduct.length;i++){%>
+<div class="product"> <!--product start-->
+                    <div class="productleft">
+                        <div class="image">
+                            <img src="<%=cartProduct[i].imageUrl%>" alt="">
+                        </div>
+                        <div class="itemNumber">
+                            <p>-</p>
+                            <p contenteditable="true"></p>
+                            <p>+</p>
+                        </div>
+                    </div>
+                    <div class="productRight">
+                        <div class="name"><%=cartProduct[i].name%></div>
+                        <div class="price">₹<%=cartProduct[i].realPrice%></div>
+                        <div class="available">In Stock</div>
+                        <div class="option">
+                            <div class="delete">Delete</div>
+                            <div class="save">Save For Later</div>
+                        </div>
+                    </div>
+                </div><!--product endl-->
+          <% }%>
+                 
+      
+            
+            <div class="overAllBill">
+                <div class="billItem bill">
+                    <p>Items:</p>
+                    <p class="totalItem"><%=cartProduct.length%></p>
+                </div>
+                <div class="delivery bill">
+                    <p>Delivery:</p>
+                    <p>Free</p>
+                </div>
+                <div class="totalAmount bill">
+                    <p>Order Total:</p>
+                    <%let bill = 0%>
+                    <%for(let i=0;i < cartProduct.length; i++){%>
+                    
+                        <% bill = parseInt(cartProduct[i].realPrice) + bill%>
+                        
+                    <%}%>
+                    <p>₹<%=bill%></p>
+                </div>
+            </div>
+            <div class="proccedButton">
+                <p>Product To Buy</p>
+                <p class="totalItem">(<%=cartProduct.length%> items)</p>
+            </div>
+            <div class="fake"></div>
+        </div>
+    </main>
+    <script src="/javaScripts/nav.js"></script>
+    <script src="/javaScripts/cart.js"></script>
+
+</body>
+</html>

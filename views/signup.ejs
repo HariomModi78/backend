@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styleSheets/signup.css">
+</head>
+<body>
+    <main>
+        <h1>SignUp</h1>
+        <form action="/signup" method="post" id="myForm">
+            <input type="text" name="name" id="" placeholder="Name" required>
+            <input type="email" name="email" id="" placeholder="Email-id" required>
+            <input type="tel" name="mobileNumber" id="mobileNumber" placeholder="10 digit Mobile Number" required>
+            <input type="password" name="password" id="" placeholder="Password" required>
+            <input type="password" name="confirmPassword" id="" placeholder="Confirm Password" required>
+            <select name="college" id="" required>
+                <option value="">Select Your College</option>
+                <option value="Medicap Univercity">Medicap Univercity</option>
+                <option value="Shi Vaishnav Vidhyapeeth Vishwavidyalaya">Shi Vaishnav Vidhyapeeth Vishwavidyalaya</option>
+            </select>
+            <input type="submit" value="Signup">
+        </form>
+        <div class="condition">
+            <input type="checkbox" name="" id="checkBox">
+            <p>Terms and conditions</p>
+        </div>
+        <div class="login">
+            <p>already have an account</p>
+            <a class="loginButton" href="\login">Login</a>
+        </div>
+    </main>
+    <script src="/javaScripts/signup.js"></script>
+
+</body>
+</html>

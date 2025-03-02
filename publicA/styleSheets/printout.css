@@ -1,0 +1,108 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+   
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    /* background-color: black; */
+    font-family: Poppins;
+   /* overflow: auto;
+    scrollbar-width: none; */
+}
+::-webkit-scrollbar {
+    display: none;
+}
+main{
+    user-select: none; 
+    height: 100%;
+    width: 100%;
+    max-width: 25rem;
+    border: 1px solid black;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    /* background-color:green; */
+    justify-self: center;
+    background-color: white;
+    justify-self: center;
+}
+.footer{
+    position: fixed;
+    height: 4rem;
+    width: 100%;
+    max-width: 22rem;
+    bottom: 0;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(219, 215, 215);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-size: 0.9rem;
+    z-index: 1000;
+}
+.footerItem{
+    border-left: 1px solid black;
+    height: 100%;
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footerItem img{
+    height: 1.5rem;
+    width: 1.5rem;
+    /* border: 1px solid white; */
+}
+form{
+    margin-top: 2rem;
+    height: 20rem;
+    width: 20rem;
+    max-width: 25rem;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(128, 128, 128, 0.411);
+    border-radius: 20px;
+}
+ 
+#file{
+    /* border: 1px solid black; */
+    height: 3rem;
+    width: 15rem;
+}
+input[type="file"]{
+    height: 10rem;
+    width: 10rem;
+}
+input[type="submit"]{
+    height: 2rem;
+    width: 5rem;
+    border-radius: 5px;
+}
+
+@media (min-width:768px){
+    body{
+        background-color: black;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+    }
+   main{
+    width: 22rem;
+    min-height: fit-content;
+   }
+   .footer{
+    width: 25rem;
+   }
+}

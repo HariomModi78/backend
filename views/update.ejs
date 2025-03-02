@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <form action="/updateItem/" method="post">
+            <input type="text" name="name" placeholder="Enter product name" value="<%=product.name%>" required>
+            <input type="text" name="newname" placeholder="Enter product name" value="<%=product.name%>" required>
+            <input type="text" name="imageUrl" placeholder="Enter image url" value="<%=product.imageUrl%>" required>
+            <input type="text" name="fakePrice" placeholder="Enter fake price" value="<%=product.fakePrice%>" required>
+            <input type="text" name="realPrice" placeholder="Enter real price" value="<%=product.realPrice%>" required>
+            <input type="text" name="productCategary" placeholder="Enter product categary" value="<%=product.productCategary%>" required>
+            <input type="submit" value="Update Item">
+        </form>
+    </main>
+</body>
+</html>

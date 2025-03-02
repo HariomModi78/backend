@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styleSheets/profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Pattaya&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head> 
+<body>
+    <main>
+        <div class="footer">
+            <div class="footerItem home">
+                <img src="/images/home (1).png" alt="">
+                <p>Home</p>
+            </div>
+            <div class="footerItem profile">
+                <img src="/images/user (1).png" alt="">
+                <p>Profile</p>
+            </div>
+            <div class="footerItem cart">
+                <img src="/images/shopping-cart.png" alt="">
+                <p>Cart</p>
+            </div>
+            <div class="footerItem menu">
+                <img src="/images/menu.png" alt="">
+                <p>Menu</p>
+            </div>
+            <div class="footerItem support">
+                <img src="/images/customer-service.png" alt="">
+                <p>Support</p>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="profilePictureBox">
+                <div class="image">
+                    <img src="/images/user (2).png" alt="">
+                </div>
+            </div>
+            <div class="profileDetail">
+                        
+                    
+                <div class="name"><%=user.name%></div>
+                <div class="mobileNumber"><%=user.mobileNumber%></div>
+            </div>
+        </div>
+        <div class="option">
+            <a class="order optionButton" href="/order/<%=user._id%>">Order</a>
+            <a class="wishList optionButton" href="/wishList/<%=user._id%>">Wishlist</a>
+            <div class="editProfile optionButton">Edit Profile</div>
+            <div class="selectLanguage optionButton">Select Language</div>
+        </div>
+        <div class="signupLoginLogout">
+            <%if(user){%>
+                <a href="\clear" class="logout">LogOut</a>
+            <%}else{%>
+                <a href="\login" class="logout">Login</a>
+                <a href="\signup" class="logout">Signup</a>
+           <% }%>
+            
+            
+        </div>
+        <div class="fake"></div>
+    </main>
+    <script src="/javaScripts/nav.js"></script>
+    <script src="/javaScripts/profile.js"></script>
+
+</body>
+</html>

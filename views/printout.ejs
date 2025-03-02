@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styleSheets/printout.css">
+</head>
+<body>
+    <main>
+        <div class="footer">
+            <div class="footerItem home">
+                <img src="/images/home (1).png" alt="">
+                <p>Home</p>
+            </div>
+            <div class="footerItem profile">
+                <img src="/images/user (1).png" alt="">
+                <p>Profile</p>
+            </div>
+            <div class="footerItem cart">
+                <img src="/images/shopping-cart.png" alt="">
+                <p>Cart</p>
+            </div>
+            <div class="footerItem menu">
+                <img src="/images/menu.png" alt="">
+                <p>Menu</p>
+            </div>
+            <div class="footerItem support">
+                <img src="/images/customer-service.png" alt="">
+                <p>Support</p>
+            </div>
+        </div> 
+        <h1>Send here </h1>
+        <form action="/printout/<%=user._id%>" method="post" enctype="multipart/form-data">
+            <input type="file" name="printout" id="file">
+            <input type="submit" value="Send">
+        </form>
+            
+    </main>
+    <script src="/javaScripts/nav.js"></script>
+    <script src="/javaScripts/printout.js"></script>
+</body>
+</html>

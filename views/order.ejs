@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styleSheets/order.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Pattaya&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="footer">
+            <div class="footerItem home">
+                <img src="/images/home (1).png" alt="">
+                <p>Home</p>
+            </div>
+            <div class="footerItem profile">
+                <img src="/images/user (1).png" alt="">
+                <p>Profile</p>
+            </div>
+            <div class="footerItem cart">
+                <img src="/images/shopping-cart.png" alt="">
+                <p>Cart</p>
+            </div>
+            <div class="footerItem menu">
+                <img src="/images/menu.png" alt="">
+                <p>Menu</p>
+            </div>
+            <div class="footerItem support">
+                <img src="/images/customer-service.png" alt="">
+                <p>Support</p>
+            </div>
+        </div>
+
+        <div class="header">
+            <div class="back icon">
+                <img src="/images/back.png" alt="">
+            </div>
+            <p>My Order</p>
+            <div class="headerSearchIcon icon">
+                <img src="/images/searchIcon.png" alt="">
+            </div>
+            <div class="cartIcon icon">
+                <img src="/images/shopping-cart.png" alt="">
+            </div>
+        </div>
+        <div class="searchBar">
+            <input type="text" name="" id="input" placeholder="Search">
+            <div class="searchIcon"></div>
+        </div>
+       <% if(user.mobileNumber=="7898488935"){%>
+            <%allOrder.forEach(function(val){%>
+                <div class="product" id="<%=allOrder.orderDate%>"> <!--product start-->
+                    <div class="productImage">
+                        <img src="<%=val.imageUrl%>" alt="">
+                    </div>
+                    <div class="orderDetail">
+                        <p class="deliveryDate ">
+                            <%if(val.status=="pending..."){%>
+                                <%=val.username%>
+                                <a class="orderTime" style="margin-bottom:2.5rem" class="productid" href="/orderDelivered/<%=val.userid%>/<%=val.productid%>/<%=val.orderDate%>">Order Delivered</a>
+                            <%}else{%>
+                            Delivered :-<%=val.username%>
+                            <%}%>
+                        </p>
+                        <p class="productName" id="<%=val.orderDate%>"><%=val.name%></p>
+                        
+                        <div class="rating">order date :<%= new Date(Number(val.orderDate)).toLocaleString() %></div>
+        
+                    </div>
+                </div> <!--product end-->
+            <%})%>
+        <%}else{%>
+            <%order.forEach(function(val){%>
+                <div class="product"> <!--product start-->
+                    <div class="productImage">
+                        <img src="<%=val.imageUrl%>" alt="">
+                    </div>
+                    <div class="orderDetail">
+                        <p class="deliveryDate ">
+                            <%if(val.status=="pending..."){%>
+                                pending...
+
+                            <%}else{%>
+                            Delivered
+                            <%}%>
+                        </p>
+                        <p class="productName" id="<%=val.orderDate%>"><%=val.name%></p>
+                        <div class="rating">order date :<%= new Date(Number(val.orderDate)).toLocaleString() %></div>
+        
+                    </div>
+                </div> <!--product end-->
+            <%})%>
+        <%}%>
+        
+       
+
+       
+
+        <p class="noMoreOrder">No more order</p>
+        <div class="fake"></div>
+    </main>
+    <script src="/javaScripts/nav.js"></script>
+    <script src="/javaScripts/order.js"></script>
+
+</body>
+</html>

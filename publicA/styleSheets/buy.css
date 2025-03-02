@@ -1,0 +1,258 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    max-height: fit-content;
+    background-color: black;
+    font-family: Poppins;
+}
+::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari */
+}
+main{
+    user-select: none; 
+
+    height: fit-content;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 25rem;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color:white;
+    justify-self: center;
+}
+.footer{
+    position: fixed;
+    height: 3.5em;
+    width: 100%;
+    max-width: 25rem;
+    bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.212);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: rgb(219, 215, 215); */
+
+    font-size: 1rem;
+}
+.price{
+    height: 80%;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    /* border: 1px solid  black; */
+    font-weight: 600;
+}
+.procced{
+    height: 80%;
+    width:40%;
+    border-radius: 10px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: aqua;
+}
+.header{
+    height: 4rem;
+    width: 100%;
+    max-width: 22rem;
+    font-size: 1.3rem;
+    /* border-bottom: 1px solid black; */
+    display: flex;
+    align-items: center;
+    /* justify-content: space-evenly; */
+}
+.back{
+    height: 3rem;
+    width: 3rem;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    
+}
+.back img,.icon img{
+    height: 50%;
+    width: 50%;
+
+}
+.header p{
+    height: 3rem;
+    width: 13rem;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+.icon{
+    height: 3rem;
+    width: 3rem;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.deliver{
+    height: 6rem;
+    width:100%;
+    max-width: 25rem;
+    border: 1px solid rgba(0, 0, 0, 0.204);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.deliver p{
+    height: 2rem;
+    /* border: 1px solid black; */
+
+}
+.address{
+    height: fit-content;
+    width: 100%;
+    /* border: 1px solid black; */
+    text-align: center;
+}
+.product{
+    height: 10rem;
+    width: 100%;
+    max-width: 22rem;
+    border: 1px solid rgba(0, 0, 0, 0.442);
+    display: flex;
+    border-radius: 20px;
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+.productImage{
+    height: 100%;
+    width: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+.productImage img{
+    height: 75%;
+    width: 100%;
+}
+.orderDetail{
+    height: 100%;
+    width: 68%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+
+}
+.priceDetail{
+    height: 3rem;
+    display: flex;
+    /* border: 1px solid black; */
+    height: calc(100%/3);
+
+}
+.name{
+    height: calc(100%/1.5);
+    /* border: 1px solid black; */
+    font-size: 1.1rem;
+    overflow: hidden;
+    
+}
+.detail{
+    height:100%;
+
+    width: fit-content;
+    font-size: 1.3rem;
+    font-weight: 600;
+    /* border: 1px solid black; */
+    padding: 0.2rem;
+}
+.off{
+    color: green;
+}
+.fakePrice{
+    opacity: 0.7;
+    text-decoration: line-through;
+}
+
+
+select{
+    width: 4rem;
+    height: 2rem;
+    outline: none;
+}
+
+.overAllBill{
+    height: 10rem;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.164);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 22rem;
+
+}
+.billItem{
+    height: calc(100%/3);
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+}
+.delivery{ 
+    height: calc(100%/3);
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: green;
+}
+.totalAmount{
+    height: calc(100%/3);
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    
+}
+del{
+    color: black;
+}
+.save{
+    height: 2rem;
+    font-size: 1.1rem;
+    color: green;
+}
+@media (min-width:768px){
+    body{
+        background-color: black;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+    }
+   main{
+    width: 25rem;
+    /* min-height: fit-content; */
+   }
+   .footer{
+    width: 25rem;
+   }
+}
